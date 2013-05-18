@@ -7,9 +7,9 @@
 #  Copyright (c) 2013 K-Apps. All rights reserved.
 #
 
-BASE_CLASS=KSManagedObject
+BASE_CLASS=KAManagedObject
 
-CURRENT_VERSION=`/usr/libexec/PlistBuddy "${INPUT_FILE_PATH}/.xccurrentversion" -c 'print _XCCurrentVersionName'`
+CURRENT_VERSION=`/usr/libexec/PlistBuddy "${INPUT_FILE_PATH}/.xccurrentversion" -c 'Print _XCCurrentVersionName'`
 
 echo mogenerator --model \"${INPUT_FILE_PATH}/$CURRENT_VERSION\" --output-dir \"${INPUT_FILE_DIR}/\" --base-class $BASE_CLASS
 mogenerator --model "${INPUT_FILE_PATH}/$CURRENT_VERSION" --output-dir "${INPUT_FILE_DIR}/" --base-class $BASE_CLASS --template-var arc=true

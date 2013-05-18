@@ -7,7 +7,7 @@
 #  Copyright (c) 2013 K-Apps. All rights reserved.
 #
 
-BASE_CLASS=KSManagedObject
+BASE_CLASS=KAManagedObject
 
 echo mogenerator --model \"${INPUT_FILE_PATH}\" --output-dir \"${INPUT_FILE_DIR}/\" --base-class $BASE_CLASS
 mogenerator --model "${INPUT_FILE_PATH}" --output-dir "${INPUT_FILE_DIR}/" --base-class $BASE_CLASS --template-var arc=true
